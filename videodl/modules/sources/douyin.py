@@ -52,5 +52,5 @@ class DouyinVideoClient(BaseVideoClient):
     '''belongto'''
     @staticmethod
     def belongto(url: str, valid_domains: list[str] | set[str] = None):
-        valid_domains = set(valid_domains or []) | {"douyin.com"}
+        valid_domains = set(valid_domains or []) | {"douyin.com", "iesdouyin.com"}
         return BaseVideoClient.belongto(url, valid_domains)
